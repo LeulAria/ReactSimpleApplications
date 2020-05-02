@@ -10,7 +10,7 @@
 
 
 ```
-the webapp deployed on netlify link: https://relaxed-bose-c26495.netlify.app/
+the webapp deployed on netlify link: [https://relaxed-bose-c26495.netlify.app/]
 ```
 
-#! beg level :) you can't even contribute :)
+#! beg level :)
