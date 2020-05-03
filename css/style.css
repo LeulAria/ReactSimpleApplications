@@ -1,0 +1,157 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #333;
+  --secondary: #f4f4f4;
+  --dark-primary: #2a2a2a;
+  --light-primary: #d0d0d0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  font-family: Rubik;
+  line-height: 2em;
+  background: var(--primary);
+  color: var(--secondary);
+  text-align: center;
+}
+
+.header {
+  width: 100%; 
+  padding: 2em 0px;
+  min-height: 100px;
+  background: var(--dark-primary);
+  margin: 0px auto 4em auto;
+}
+
+.title {
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 2rem; 
+}
+
+.sub-title {
+  font-size: 1.3rem;
+  margin: 1em;
+  color: var(--light-primary);
+}
+
+.themes {
+  width: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.theme-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.theme-circle:hover {
+  animation: rot 1s alternate infinite; 
+}
+@keyframes rot {
+  from {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+.dark {
+  background: #555;
+}
+.light {
+  background: #FFF;
+}
+
+.card-container {
+  width: 80%;
+  min-height: 400px;
+  margin: auto;
+  transition: all 0.6s;
+}
+
+.card {
+  width: 250px;
+  height: 320px;
+  margin: 1.5em auto;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  background: var(--secondary);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__img {
+  width: 250px;
+  height: 250px;
+  transition: all 0.4s;
+}
+
+.card__img img {
+  width: 100%;
+  border-top-left-radius: 3px; 
+  border-top-right-radius: 3px; 
+}
+
+.card__desc {
+  transition: all 0.6s;
+  position: relative;
+}
+
+.card__title {
+  color: var(--primary);
+}
+
+.card__created-date {
+  color: var(--primary);
+}
+
+.card:hover .card__img {
+  height: 0px;
+  opacity: 0;
+}
+
+.card:hover .card__desc {
+  height: 100%;
+  padding: 2em;
+}
+ 
+.btn {
+  position: absolute;
+  z-index: 10;
+  background: #7766BB;
+  color: #fff;
+  font-family: Rubik;
+  font-size: 1em;
+  border: none;
+  margin: 2em auto; 
+  border-radius: 3px;
+  padding: 1em 4em;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+} 
+
+@media screen and (min-width: 980px) {
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
